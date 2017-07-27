@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Order {
 
-	private List<Parcel> parcelList = new ArrayList<>(3);
+	private List<Parcel> parcelList = new ArrayList<>();
 	private City destination;
 
 	public Order() {
@@ -20,8 +20,12 @@ public class Order {
 		return parcelList;
 	}
 
-	public void addParcel() {
-		
+	public void addParcel(Parcel parcel) throws Exception {
+		if(this.parcelList.size() <= 3) {
+			parcelList.add(parcel);
+		} else {
+			throw new Exception("Not more than 3 parcels allowed per order");
+		}
 	}
 
 	public City getDestination() {
