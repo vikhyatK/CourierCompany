@@ -7,12 +7,22 @@ import exceptions.ParcelValidationException;
 
 public class Order {
 
+	private long orderId;
 	private List<Parcel> parcelList = new ArrayList<>();
 	private City destination;
+	private int totalCharges;
 	
 	public Order(Parcel parcel, City destination) {
 		this.destination = destination;
 		this.parcelList.add(parcel);
+	}
+
+	public long getOrderId() {
+		return orderId;
+	}
+
+	public void setOrderId(long orderId) {
+		this.orderId = orderId;
 	}
 
 	public List<Parcel> getParcelList() {
@@ -34,4 +44,13 @@ public class Order {
 	public void setDestination(City destination) {
 		this.destination = destination;
 	}
+
+	public int getTotalCharges() {
+		return totalCharges;
+	}
+
+	public void setTotalCharges(int totalCharges) {
+		this.totalCharges = totalCharges;
+	}
+
 }
