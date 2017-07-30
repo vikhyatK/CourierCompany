@@ -1,0 +1,4 @@
+Bangalore:30
+Goa:50
+Kolkata:60
+Mumbai:100

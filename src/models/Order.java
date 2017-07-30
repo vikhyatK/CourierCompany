@@ -9,10 +9,10 @@ public class Order {
 
 	private long orderId;
 	private List<Parcel> parcelList = new ArrayList<>();
-	private City destination;
-	private int totalCharges;
+	private String destination;
+	private double totalCharges;
 	
-	public Order(Parcel parcel, City destination) {
+	public Order(Parcel parcel, String destination) {
 		this.destination = destination;
 		this.parcelList.add(parcel);
 	}
@@ -37,19 +37,19 @@ public class Order {
 		}
 	}
 
-	public City getDestination() {
+	public String getDestination() {
 		return destination;
 	}
 
-	public void setDestination(City destination) {
+	public void setDestination(String destination) {
 		this.destination = destination;
 	}
 
-	public int getTotalCharges() {
+	public double getTotalCharges() {
 		return totalCharges;
 	}
 
-	public void setTotalCharges(int totalCharges) {
+	public void setTotalCharges(double totalCharges) {
 		this.totalCharges = totalCharges;
 	}
 

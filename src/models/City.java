@@ -3,8 +3,15 @@ package models;
 public class City {
 
 	private String name;
-	private int firstHalfCharges;
-	private int secondHalfCharges;
+	private double firstHalfCharges;
+	private double secondHalfCharges;
+
+	public City(String name, double firstHalfCharges, double secondHalfCharges) {
+		super();
+		this.name = name;
+		this.firstHalfCharges = firstHalfCharges;
+		this.secondHalfCharges = secondHalfCharges;
+	}
 
 	public String getName() {
 		return name;
@@ -12,16 +19,16 @@ public class City {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public int getFirstHalfCharges() {
+	public double getFirstHalfCharges() {
 		return firstHalfCharges;
 	}
-	public void setFirstHalfCharges(int firstHalfCharges) {
+	public void setFirstHalfCharges(double firstHalfCharges) {
 		this.firstHalfCharges = firstHalfCharges;
 	}
-	public int getSecondHalfCharges() {
+	public double getSecondHalfCharges() {
 		return secondHalfCharges;
 	}
-	public void setSecondHalfCharges(int secondHalfCharges) {
+	public void setSecondHalfCharges(double secondHalfCharges) {
 		this.secondHalfCharges = secondHalfCharges;
 	}
 }
