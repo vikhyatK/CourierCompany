@@ -1,7 +1,5 @@
 package models;
 
-import exceptions.ParcelValidationException;
-
 public class Parcel {
 
 	private int actualWeight;
