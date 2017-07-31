@@ -12,14 +12,14 @@ public class Order {
 	private List<Parcel> parcelList = new ArrayList<>();
 	private String destination;
 	private double totalCharges;
-	
+
 	public Order(Parcel parcel, String destination) {
 		generatedIds++;
 		orderId = generatedIds;
 		this.destination = destination;
 		this.parcelList.add(parcel);
 	}
-	
+
 	public Order(String destination) {
 		generatedIds++;
 		orderId = generatedIds;
@@ -39,7 +39,7 @@ public class Order {
 	}
 
 	public void addParcel(Parcel parcel) throws ParcelValidationException {
-		if(this.parcelList.size() < 3) {
+		if (this.parcelList.size() < 3) {
 			parcelList.add(parcel);
 		} else {
 			throw new ParcelValidationException("Maximum of 3 parcels allowed per order");

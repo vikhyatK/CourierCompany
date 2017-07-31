@@ -7,7 +7,7 @@ public class OrderValidatorImpl implements IOrderValidator {
 
 	@Override
 	public void validateOrder(Order order) throws ParcelValidationException {
-		if(order.getDestination() == null)
+		if (order.getDestination() == null)
 			throw new ParcelValidationException("Destination cannot be null");
 		if (order.getParcelList().isEmpty())
 			throw new ParcelValidationException("Order should contain at least 1 parcel");

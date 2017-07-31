@@ -17,9 +17,9 @@ public class ParcelServiceImpl implements IParcelService {
 
 	@Override
 	public boolean submitOrders(List<Order> orderList) throws ParcelValidationException {
-		for(Order order : orderList) {
+		for (Order order : orderList) {
 			orderValidator.validateOrder(order);
-			for(Parcel parcel : order.getParcelList()) {
+			for (Parcel parcel : order.getParcelList()) {
 				parcelValidator.validateParcel(parcel);
 			}
 			parcelDispatcher.dispatchOrder(order);
