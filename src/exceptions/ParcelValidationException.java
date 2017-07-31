@@ -2,6 +2,11 @@ package exceptions;
 
 public class ParcelValidationException extends Exception {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	public ParcelValidationException() {
 		// TODO Auto-generated constructor stub
 	}

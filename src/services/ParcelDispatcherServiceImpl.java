@@ -34,11 +34,13 @@ public class ParcelDispatcherServiceImpl implements IParcelDispatcherService {
 						throw new ParcelValidationException("Queues for today are full. No more parcels");
 					} else {
 						secondTotalWt = secondTotalWt + parcel.getActualWeight();
+						secondHalf.add(parcel);
 						totalCharges = totalCharges
 								+ billCalulator.calculateCharges(parcel, order.getDestination(), true);
 					}
 				} else {
 					firstTotalWt = firstTotalWt + parcel.getActualWeight();
+					firstHalf.add(parcel);
 					totalCharges = totalCharges + billCalulator.calculateCharges(parcel, order.getDestination(), false);
 				}
 			}
